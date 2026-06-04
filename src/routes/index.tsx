@@ -222,35 +222,6 @@ function Experience() {
   );
 }
 
-function Beyond() {
-  const items = [
-    ["Tee Times", "We arrange your reservation."],
-    ["Course Briefing", "Hole-by-hole strategy before the first tee."],
-    ["The 19th Hole", "A table waiting when the round is done."],
-    ["Logistics", "Transport and club rental, coordinated end to end."],
-  ];
-  return (
-    <section className="bg-forest-dark py-32 lg:py-40 px-6 lg:px-10">
-      <div className="max-w-7xl mx-auto">
-        <div className="fade-up max-w-3xl mb-20">
-          <div className="label">Beyond the Round</div>
-          <h2 className="mt-6 text-cream text-4xl lg:text-6xl font-light leading-[1.1]">
-            Everything handled, <em className="italic text-gold-light">before</em> you arrive.
-          </h2>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gold/25">
-          {items.map(([title, body]) => (
-            <div key={title} className="fade-up bg-forest-dark p-10">
-              <h4 className="text-cream text-2xl font-light">{title}</h4>
-              <p className="mt-4 text-cream/70 leading-relaxed font-light">{body}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function CourseKnowledge() {
   return (
     <section className="grid lg:grid-cols-2 min-h-[600px]">
@@ -259,14 +230,14 @@ function CourseKnowledge() {
       </div>
       <div className="bg-cream p-12 lg:p-20 flex items-center fade-up">
         <div className="max-w-xl">
-          <div className="label">How We Read a Course</div>
+          <div className="label">How We Walk With You</div>
           <h2 className="mt-6 text-forest-dark text-4xl lg:text-5xl font-light leading-[1.15]">
-            We've competed on these courses. We know <em className="italic text-forest">every break</em>.
+            Less to think about. <em className="italic text-forest">More to enjoy.</em>
           </h2>
           <p className="mt-8 text-forest-dark/80 text-lg leading-relaxed font-light">
-            Course knowledge comes from playing under pressure. From tournament rounds where a foot
-            of break either side is the difference between a card you keep and one you don't. That's
-            the knowledge now on your side of the bag.
+            We handle the reading, the distances, the small decisions — and everything around the
+            round, sorted before you arrive. You're free to play, take in the course, and enjoy the
+            company. An easy pace, good conversation, and a round that takes care of itself.
           </p>
           <div className="mt-10 w-16 h-px bg-gold" />
         </div>
@@ -357,7 +328,7 @@ function WhoWeAre() {
         {[
           {
             name: "Konstantin",
-            role: "Co-founder · Operator",
+            role: "Caddie & Operator",
             body: "Former national team golfer. Economics student at Nova SBE, member of Clube de Golf do Estoril. Handles every booking personally.",
             img: konstantinAsset.url,
           },
@@ -490,7 +461,7 @@ function Index() {
       <Hero />
       <Manifesto />
       <Experience />
-      <Beyond />
+      
       <CourseKnowledge />
       <Partners />
       <WhoWeAre />
