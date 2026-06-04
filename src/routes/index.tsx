@@ -147,7 +147,7 @@ function Hero() {
             <div className="space-y-6">
               {[
                 ["2", "National Team Golfers"],
-                ["5", "Regions Across Portugal"],
+                ["—", "Available Across Portugal"],
                 ["7", "Days a Week"],
               ].map(([n, label], i) => (
                 <div key={label} className={i > 0 ? "pt-6 border-t border-gold/40" : ""}>
@@ -328,8 +328,8 @@ function WhoWeAre() {
         {[
           {
             name: "Konstantin",
-            role: "Caddie & Operator",
-            body: "Former national team golfer. Economics student at Nova SBE, member of Clube de Golf do Estoril. Handles every booking personally.",
+            role: "Co-founder · Caddie & Operator",
+            body: "Former national team golfer. Economics student at Nova SBE. Handles every booking personally.",
             img: konstantinAsset.url,
           },
           {
