@@ -10,13 +10,13 @@ import blazersAsset from "@/assets/blazers.jpg.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The Scratch Caddies — Portugal" },
+      { title: "The Scratch Caddies - Portugal" },
       {
         name: "description",
         content:
           "Portugal's caddie and playing partner service. Current and former national team golfers, walking every hole at your side.",
       },
-      { property: "og:title", content: "The Scratch Caddies — Portugal" },
+      { property: "og:title", content: "The Scratch Caddies - Portugal" },
       {
         property: "og:description",
         content:
@@ -125,7 +125,7 @@ function Hero() {
             </h1>
             <p className="mt-8 text-cream/85 text-lg lg:text-xl max-w-2xl leading-relaxed font-light">
               Portugal's caddie and playing partner service. Current and former national team
-              golfers, walking every hole at your side. Available across the country — location
+              golfers, walking every hole at your side. Available across the country - location
               based on request.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -147,7 +147,6 @@ function Hero() {
             <div className="space-y-6">
               {[
                 ["2", "National Team Golfers"],
-                ["—", "Available Across Portugal"],
                 ["7", "Days a Week"],
               ].map(([n, label], i) => (
                 <div key={label} className={i > 0 ? "pt-6 border-t border-gold/40" : ""}>
@@ -235,7 +234,7 @@ function CourseKnowledge() {
             Less to think about. <em className="italic text-forest">More to enjoy.</em>
           </h2>
           <p className="mt-8 text-forest-dark/80 text-lg leading-relaxed font-light">
-            We handle the reading, the distances, the small decisions — and everything around the
+            We handle the reading, the distances, the small decisions - and everything around the
             round, sorted before you arrive. You're free to play, take in the course, and enjoy the
             company. An easy pace, good conversation, and a round that takes care of itself.
           </p>
@@ -271,7 +270,7 @@ function Partners() {
             The service your guests <em className="italic text-gold-light">deserve</em>.
           </h2>
           <p className="mt-8 text-cream/80 text-lg leading-relaxed font-light max-w-lg">
-            We work alongside the finest hotels, concierges, and golf clubs in Portugal — the name
+            We work alongside the finest hotels, concierges, and golf clubs in Portugal - the name
             they can put next to their own, with the certainty it belongs there.
           </p>
           <a
@@ -327,13 +326,13 @@ function WhoWeAre() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32 grid md:grid-cols-2 gap-10">
         {[
           {
-            name: "Konstantin",
+            name: "Konstantin Mikirtumov",
             role: "Co-founder · Caddie & Operator",
             body: "Former national team golfer. Economics student at Nova SBE. Handles every booking personally.",
             img: konstantinAsset.url,
           },
           {
-            name: "José Miguel",
+            name: "José Miguel Franco de Sousa",
             role: "Co-founder · Caddie",
             body: "Current national team player pursuing a professional career. Available when his tournament schedule allows.",
             img: joseAsset.url,
@@ -380,7 +379,7 @@ function Book() {
             e.preventDefault();
             const data = new FormData(e.currentTarget);
             const lines = ["Name: " + data.get("name"), "Email: " + data.get("email"), "Course: " + data.get("course"), "Date: " + data.get("date"), "", String(data.get("message") || "")];
-            window.location.href = `mailto:thescratchcaddies@gmail.com?subject=${encodeURIComponent("Booking enquiry — " + (data.get("name") || ""))}&body=${encodeURIComponent(lines.join("\n"))}`;
+            window.location.href = `mailto:thescratchcaddies@gmail.com?subject=${encodeURIComponent("Booking enquiry - " + (data.get("name") || ""))}&body=${encodeURIComponent(lines.join("\n"))}`;
           }}
         >
           {[
