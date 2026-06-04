@@ -326,13 +326,13 @@ function WhoWeAre() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32 grid md:grid-cols-2 gap-10">
         {[
           {
-            name: "Konstantin",
+            name: "Konstantin Mikirtumov",
             role: "Co-founder · Caddie & Operator",
             body: "Former national team golfer. Economics student at Nova SBE. Handles every booking personally.",
             img: konstantinAsset.url,
           },
           {
-            name: "José Miguel",
+            name: "José Miguel Franco de Sousa",
             role: "Co-founder · Caddie",
             body: "Current national team player pursuing a professional career. Available when his tournament schedule allows.",
             img: joseAsset.url,
