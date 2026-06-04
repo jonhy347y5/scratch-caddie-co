@@ -461,7 +461,7 @@ function Index() {
       <Hero />
       <Manifesto />
       <Experience />
-      <Beyond />
+      
       <CourseKnowledge />
       <Partners />
       <WhoWeAre />
