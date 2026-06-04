@@ -328,7 +328,7 @@ function WhoWeAre() {
         {[
           {
             name: "Konstantin",
-            role: "Co-founder · Operator",
+            role: "Caddie & Operator",
             body: "Former national team golfer. Economics student at Nova SBE, member of Clube de Golf do Estoril. Handles every booking personally.",
             img: konstantinAsset.url,
           },
