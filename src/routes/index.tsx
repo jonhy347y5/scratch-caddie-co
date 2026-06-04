@@ -147,7 +147,6 @@ function Hero() {
             <div className="space-y-6">
               {[
                 ["2", "National Team Golfers"],
-                ["-", "Available Across Portugal"],
                 ["7", "Days a Week"],
               ].map(([n, label], i) => (
                 <div key={label} className={i > 0 ? "pt-6 border-t border-gold/40" : ""}>
