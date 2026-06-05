@@ -424,16 +424,12 @@ function Book() {
             </button>
           </div>
         </form>
-        <div className="fade-up mt-16 pt-10 border-t border-forest/15 text-center text-forest/80 text-sm tracking-wider">
-          <a href="https://wa.me/351913481537" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
-            WhatsApp
-          </a>
-          <span className="mx-3 text-gold">·</span>
-          <a href="https://www.instagram.com/thescratchcaddies" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
-            @thescratchcaddies
-          </a>
-          <span className="mx-3 text-gold">·</span>
-          <a href="mailto:thescratchcaddies@gmail.com" className="hover:text-gold transition-colors">
+        <div className="fade-up mt-16 pt-10 border-t border-forest/15 text-center text-forest/80 text-base tracking-wide font-light">
+          For more information send an email to:{" "}
+          <a
+            href="mailto:thescratchcaddies@gmail.com"
+            className="text-forest hover:text-gold transition-colors underline-offset-4 hover:underline"
+          >
             thescratchcaddies@gmail.com
           </a>
         </div>
