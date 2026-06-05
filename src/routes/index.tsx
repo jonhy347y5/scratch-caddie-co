@@ -5,6 +5,8 @@ import logoAsset from "@/assets/logo.png.asset.json";
 import fairwayAsset from "@/assets/fairway.jpg.asset.json";
 import konstantinAsset from "@/assets/konstantin.jpg.asset.json";
 import joseAsset from "@/assets/jose.jpg.asset.json";
+import joseBookAsset from "@/assets/jose-book.jpg.asset.json";
+import josePortraitAsset from "@/assets/jose-portrait.jpg.asset.json";
 import blazersAsset from "@/assets/blazers.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
