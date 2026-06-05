@@ -447,11 +447,6 @@ function Footer() {
             <div className="label mt-1">Portugal · Est. 2026</div>
           </div>
         </div>
-        <div className="flex items-center gap-5 text-cream/70 text-sm tracking-wider">
-          <a href="mailto:thescratchcaddies@gmail.com" className="hover:text-gold transition-colors">
-            thescratchcaddies@gmail.com
-          </a>
-        </div>
 
 
       </div>
