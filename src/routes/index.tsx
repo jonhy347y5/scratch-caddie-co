@@ -1,5 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { Instagram } from "lucide-react";
+
+const WhatsAppIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.746.455 3.45 1.32 4.95L2 22l5.25-1.378a9.86 9.86 0 0 0 4.78 1.22h.005c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13a8.18 8.18 0 0 1-4.17-1.14l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.25-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23z" />
+  </svg>
+);
 import { useReveal } from "@/hooks/use-reveal";
 import logoAsset from "@/assets/logo.png.asset.json";
 import fairwayAsset from "@/assets/fairway.jpg.asset.json";
@@ -417,16 +424,12 @@ function Book() {
             </button>
           </div>
         </form>
-        <div className="fade-up mt-16 pt-10 border-t border-forest/15 text-center text-forest/80 text-sm tracking-wider">
-          <a href="https://wa.me/351913481537" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
-            WhatsApp
-          </a>
-          <span className="mx-3 text-gold">·</span>
-          <a href="https://www.instagram.com/thescratchcaddies" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
-            @thescratchcaddies
-          </a>
-          <span className="mx-3 text-gold">·</span>
-          <a href="mailto:thescratchcaddies@gmail.com" className="hover:text-gold transition-colors">
+        <div className="fade-up mt-16 pt-10 border-t border-forest/15 text-center text-forest/80 text-base tracking-wide font-light">
+          For more information send an email to:{" "}
+          <a
+            href="mailto:thescratchcaddies@gmail.com"
+            className="text-forest hover:text-gold transition-colors underline-offset-4 hover:underline"
+          >
             thescratchcaddies@gmail.com
           </a>
         </div>
@@ -446,6 +449,26 @@ function Footer() {
             <div className="text-cream text-lg font-light">The Scratch Caddies</div>
             <div className="label mt-1">Portugal · Est. 2026</div>
           </div>
+        </div>
+        <div className="flex items-center gap-5">
+          <a
+            href="https://wa.me/351913481537"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            className="text-cream/70 hover:text-gold transition-colors"
+          >
+            <WhatsAppIcon className="w-5 h-5" />
+          </a>
+          <a
+            href="https://www.instagram.com/thescratchcaddies"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="text-cream/70 hover:text-gold transition-colors"
+          >
+            <Instagram size={20} strokeWidth={1.5} />
+          </a>
         </div>
 
 
