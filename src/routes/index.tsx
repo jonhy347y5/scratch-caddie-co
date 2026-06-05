@@ -450,6 +450,26 @@ function Footer() {
             <div className="label mt-1">Portugal · Est. 2026</div>
           </div>
         </div>
+        <div className="flex items-center gap-5">
+          <a
+            href="https://wa.me/351913481537"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            className="text-cream/70 hover:text-gold transition-colors"
+          >
+            <WhatsAppIcon className="w-5 h-5" />
+          </a>
+          <a
+            href="https://www.instagram.com/thescratchcaddies"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="text-cream/70 hover:text-gold transition-colors"
+          >
+            <Instagram size={20} strokeWidth={1.5} />
+          </a>
+        </div>
 
 
       </div>
