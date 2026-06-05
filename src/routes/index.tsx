@@ -425,6 +425,10 @@ function Book() {
           <a href="https://www.instagram.com/thescratchcaddies" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
             @thescratchcaddies
           </a>
+          <span className="mx-3 text-gold">·</span>
+          <a href="mailto:thescratchcaddies@gmail.com" className="hover:text-gold transition-colors">
+            thescratchcaddies@gmail.com
+          </a>
         </div>
 
       </div>
