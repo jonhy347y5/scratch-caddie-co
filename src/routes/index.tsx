@@ -337,7 +337,7 @@ function WhoWeAre() {
             name: "José Miguel Franco de Sousa",
             role: "Co-founder · Caddie",
             body: "Current national team player pursuing a professional career. Available when his tournament schedule allows.",
-            img: joseAsset.url,
+            img: josePortraitAsset.url,
           },
         ].map((f) => (
           <div key={f.name} className="fade-up border border-gold/25 bg-forest/40">
