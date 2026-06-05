@@ -448,9 +448,6 @@ function Footer() {
           </div>
         </div>
         <div className="flex items-center gap-5 text-cream/70 text-sm tracking-wider">
-          <a href="https://www.instagram.com/thescratchcaddies" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
-            @thescratchcaddies
-          </a>
           <a href="mailto:thescratchcaddies@gmail.com" className="hover:text-gold transition-colors">
             thescratchcaddies@gmail.com
           </a>
