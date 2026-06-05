@@ -227,7 +227,7 @@ function CourseKnowledge() {
   return (
     <section className="grid lg:grid-cols-2 min-h-[600px]">
       <div className="relative min-h-[400px] lg:min-h-[700px]">
-        <img src={joseAsset.url} alt="Reading a yardage book" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={joseBookAsset.url} alt="Reading a yardage book" className="absolute inset-0 w-full h-full object-cover" />
       </div>
       <div className="bg-cream p-12 lg:p-20 flex items-center fade-up">
         <div className="max-w-xl">
