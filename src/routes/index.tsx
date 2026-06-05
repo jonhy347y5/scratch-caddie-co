@@ -447,9 +447,18 @@ function Footer() {
             <div className="label mt-1">Portugal · Est. 2026</div>
           </div>
         </div>
-        <a href="https://wa.me/351913481537" target="_blank" rel="noopener noreferrer" className="text-cream/70 hover:text-gold text-sm tracking-wider transition-colors">
-          WhatsApp
-        </a>
+        <div className="flex items-center gap-5 text-cream/70 text-sm tracking-wider">
+          <a href="https://wa.me/351913481537" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+            WhatsApp
+          </a>
+          <a href="https://www.instagram.com/thescratchcaddies" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+            @thescratchcaddies
+          </a>
+          <a href="mailto:thescratchcaddies@gmail.com" className="hover:text-gold transition-colors">
+            thescratchcaddies@gmail.com
+          </a>
+        </div>
+
 
       </div>
     </footer>
