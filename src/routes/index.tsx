@@ -5,6 +5,8 @@ import logoAsset from "@/assets/logo.png.asset.json";
 import fairwayAsset from "@/assets/fairway.jpg.asset.json";
 import konstantinAsset from "@/assets/konstantin.jpg.asset.json";
 import joseAsset from "@/assets/jose.jpg.asset.json";
+import joseBookAsset from "@/assets/jose-book.jpg.asset.json";
+import josePortraitAsset from "@/assets/jose-portrait.jpg.asset.json";
 import blazersAsset from "@/assets/blazers.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -225,7 +227,7 @@ function CourseKnowledge() {
   return (
     <section className="grid lg:grid-cols-2 min-h-[600px]">
       <div className="relative min-h-[400px] lg:min-h-[700px]">
-        <img src={joseAsset.url} alt="Reading a yardage book" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={joseBookAsset.url} alt="Reading a yardage book" className="absolute inset-0 w-full h-full object-cover" />
       </div>
       <div className="bg-cream p-12 lg:p-20 flex items-center fade-up">
         <div className="max-w-xl">
@@ -335,7 +337,7 @@ function WhoWeAre() {
             name: "José Miguel Franco de Sousa",
             role: "Co-founder · Caddie",
             body: "Current national team player pursuing a professional career. Available when his tournament schedule allows.",
-            img: joseAsset.url,
+            img: josePortraitAsset.url,
           },
         ].map((f) => (
           <div key={f.name} className="fade-up border border-gold/25 bg-forest/40">
@@ -423,6 +425,10 @@ function Book() {
           <a href="https://www.instagram.com/thescratchcaddies" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
             @thescratchcaddies
           </a>
+          <span className="mx-3 text-gold">·</span>
+          <a href="mailto:thescratchcaddies@gmail.com" className="hover:text-gold transition-colors">
+            thescratchcaddies@gmail.com
+          </a>
         </div>
 
       </div>
@@ -441,9 +447,18 @@ function Footer() {
             <div className="label mt-1">Portugal · Est. 2026</div>
           </div>
         </div>
-        <a href="https://wa.me/351913481537" target="_blank" rel="noopener noreferrer" className="text-cream/70 hover:text-gold text-sm tracking-wider transition-colors">
-          WhatsApp
-        </a>
+        <div className="flex items-center gap-5 text-cream/70 text-sm tracking-wider">
+          <a href="https://wa.me/351913481537" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+            WhatsApp
+          </a>
+          <a href="https://www.instagram.com/thescratchcaddies" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+            @thescratchcaddies
+          </a>
+          <a href="mailto:thescratchcaddies@gmail.com" className="hover:text-gold transition-colors">
+            thescratchcaddies@gmail.com
+          </a>
+        </div>
+
 
       </div>
     </footer>
