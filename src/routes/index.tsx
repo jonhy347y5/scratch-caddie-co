@@ -416,18 +416,15 @@ function Book() {
           </div>
         </form>
         <div className="fade-up mt-16 pt-10 border-t border-forest/15 text-center text-forest/80 text-sm tracking-wider">
-          <a href="https://wa.me/351913481537" className="hover:text-gold transition-colors">
-            WhatsApp +351 913 481 537
+          <a href="https://wa.me/351913481537" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+            WhatsApp
           </a>
           <span className="mx-3 text-gold">·</span>
-          <a href="mailto:thescratchcaddies@gmail.com" className="hover:text-gold transition-colors">
-            thescratchcaddies@gmail.com
-          </a>
-          <span className="mx-3 text-gold">·</span>
-          <a href="https://instagram.com/thescratchcaddies" className="hover:text-gold transition-colors">
+          <a href="https://www.instagram.com/thescratchcaddies" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
             @thescratchcaddies
           </a>
         </div>
+
       </div>
     </section>
   );
@@ -444,9 +441,10 @@ function Footer() {
             <div className="label mt-1">Portugal · Est. 2026</div>
           </div>
         </div>
-        <a href="mailto:thescratchcaddies@gmail.com" className="text-cream/70 hover:text-gold text-sm tracking-wider transition-colors">
-          thescratchcaddies@gmail.com
+        <a href="https://wa.me/351913481537" target="_blank" rel="noopener noreferrer" className="text-cream/70 hover:text-gold text-sm tracking-wider transition-colors">
+          WhatsApp
         </a>
+
       </div>
     </footer>
   );
