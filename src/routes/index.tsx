@@ -8,13 +8,12 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 import { useReveal } from "@/hooks/use-reveal";
-import logoAsset from "@/assets/logo.png.asset.json";
-import fairwayAsset from "@/assets/fairway.jpg.asset.json";
-import konstantinAsset from "@/assets/konstantin.jpg.asset.json";
-import joseAsset from "@/assets/jose.jpg.asset.json";
-import joseBookAsset from "@/assets/jose-book.jpg.asset.json";
-import josePortraitAsset from "@/assets/jose-portrait.jpg.asset.json";
-import blazersAsset from "@/assets/blazers.jpg.asset.json";
+const logoAsset = { url: "/logo.png" };
+const fairwayAsset = { url: "/fairway.jpg" };
+const konstantinAsset = { url: "/konstantin.jpg" };
+const joseBookAsset = { url: "/jose-book.jpg" };
+const josePortraitAsset = { url: "/jose-portrait.jpg" };
+const blazersAsset = { url: "/blazers.jpg" };
 
 export const Route = createFileRoute("/")({
   head: () => ({
