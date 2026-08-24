@@ -1,20 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Instagram } from "lucide-react";
+import { Instagram, FileText } from "lucide-react";
+import { useReveal } from "@/hooks/use-reveal";
+import logoAsset from "@/assets/logo.png.asset.json";
+import fairwayAsset from "@/assets/fairway.jpg.asset.json";
+import konstantinAsset from "@/assets/konstantin.jpg.asset.json";
+import josePortraitAsset from "@/assets/jose-portrait.jpg.asset.json";
+import joseBookAsset from "@/assets/jose-book.jpg.asset.json";
+import blazersAsset from "@/assets/blazers.jpg.asset.json";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.746.455 3.45 1.32 4.95L2 22l5.25-1.378a9.86 9.86 0 0 0 4.78 1.22h.005c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13a8.18 8.18 0 0 1-4.17-1.14l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.25-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23z" />
   </svg>
 );
-import { useReveal } from "@/hooks/use-reveal";
-import logoAsset from "@/assets/logo.png.asset.json";
-import fairwayAsset from "@/assets/fairway.jpg.asset.json";
-import konstantinAsset from "@/assets/konstantin.jpg.asset.json";
-import joseAsset from "@/assets/jose.jpg.asset.json";
-import joseBookAsset from "@/assets/jose-book.jpg.asset.json";
-import josePortraitAsset from "@/assets/jose-portrait.jpg.asset.json";
-import blazersAsset from "@/assets/blazers.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,8 +27,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "The Scratch Caddies · Portugal" },
       {
         property: "og:description",
-        content:
-          "A round worth remembering. Portugal's caddie and playing partner service.",
+        content: "A round worth remembering. Portugal's caddie and playing partner service.",
       },
       { property: "og:image", content: fairwayAsset.url },
     ],
@@ -40,16 +38,19 @@ export const Route = createFileRoute("/")({
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
   const links = [
     { label: "The Experience", href: "#experience" },
     { label: "Partners", href: "#partners" },
     { label: "Who We Are", href: "#who" },
   ];
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -61,7 +62,8 @@ function Nav() {
           <img src={logoAsset.url} alt="The Scratch Caddies" className="w-11 h-11 rounded-full" />
           <span className="label text-gold hidden sm:inline">The Scratch · Portugal</span>
         </a>
-        <div className="hidden md:flex items-center gap-10">
+
+        <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <a
               key={l.href}
@@ -72,22 +74,29 @@ function Nav() {
             </a>
           ))}
           <a
+            href="/brochure.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-cream/90 hover:text-gold transition-colors text-base tracking-wide"
+          >
+            <FileText className="w-4 h-4 text-gold" />
+            Brochure
+          </a>
+          <a
             href="#book"
             className="border border-gold text-gold px-6 py-2 tracking-[0.2em] uppercase text-xs hover:bg-gold hover:text-forest-dark transition-all"
           >
             Book a Round
           </a>
         </div>
-        <button
-          className="md:hidden text-cream"
-          onClick={() => setOpen(!open)}
-          aria-label="Menu"
-        >
+
+        <button className="md:hidden text-cream" onClick={() => setOpen(!open)} aria-label="Menu">
           <div className="w-6 h-px bg-gold mb-1.5" />
           <div className="w-6 h-px bg-gold mb-1.5" />
           <div className="w-6 h-px bg-gold" />
         </button>
       </div>
+
       {open && (
         <div className="md:hidden bg-forest-dark border-t border-gold/20 mt-4">
           <div className="px-6 py-6 flex flex-col gap-5">
@@ -101,6 +110,15 @@ function Nav() {
                 {l.label}
               </a>
             ))}
+            <a
+              href="/brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="text-cream/90 text-lg flex items-center gap-2"
+            >
+              <FileText className="w-4 h-4 text-gold" /> Brochure
+            </a>
             <a
               href="#book"
               onClick={() => setOpen(false)}
@@ -237,7 +255,11 @@ function CourseKnowledge() {
   return (
     <section className="grid lg:grid-cols-2 min-h-[600px]">
       <div className="relative min-h-[400px] lg:min-h-[700px]">
-        <img src={joseBookAsset.url} alt="Reading a yardage book" className="absolute inset-0 w-full h-full object-cover" />
+        <img
+          src={joseBookAsset.url}
+          alt="Reading a yardage book"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
       <div className="bg-cream p-12 lg:p-20 flex items-center fade-up">
         <div className="max-w-xl">
@@ -266,15 +288,6 @@ function Partners() {
   ];
   return (
     <section id="partners" className="relative bg-forest py-32 lg:py-40 px-6 lg:px-10 overflow-hidden">
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] -translate-y-1/3 translate-x-1/3 pointer-events-none opacity-30">
-        {[1, 2, 3, 4, 5].map((i) => (
-          <div
-            key={i}
-            className="absolute inset-0 rounded-full border border-gold/40"
-            style={{ transform: `scale(${1 - i * 0.15})` }}
-          />
-        ))}
-      </div>
       <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24">
         <div className="fade-up">
           <div className="label">02 / For Partners</div>
@@ -308,7 +321,10 @@ function Partners() {
         </div>
         <div className="space-y-px bg-gold/25">
           {rows.map(([title, body]) => (
-            <div key={title} className="fade-up bg-forest p-8 border border-transparent hover:border-gold/40 transition-colors">
+            <div
+              key={title}
+              className="fade-up bg-forest p-8 border border-transparent hover:border-gold/40 transition-colors"
+            >
               <h4 className="text-cream text-xl font-light">{title}</h4>
               <p className="mt-2 text-cream/70 font-light">{body}</p>
             </div>
@@ -324,7 +340,11 @@ function WhoWeAre() {
     <section id="who" className="bg-forest-dark">
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[500px] lg:min-h-[800px]">
-          <img src={blazersAsset.url} alt="Konstantin and José Miguel in national team blazers" className="absolute inset-0 w-full h-full object-cover" />
+          <img
+            src={blazersAsset.url}
+            alt="Konstantin and José Miguel in national team blazers"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
         </div>
         <div className="p-10 lg:p-20 flex items-center fade-up">
           <div className="max-w-xl">
@@ -404,8 +424,17 @@ function Book() {
           onSubmit={(e) => {
             e.preventDefault();
             const data = new FormData(e.currentTarget);
-            const lines = ["Name: " + data.get("name"), "Email: " + data.get("email"), "Course: " + data.get("course"), "Date: " + data.get("date"), "", String(data.get("message") || "")];
-            window.location.href = `mailto:thescratchcaddies@gmail.com?subject=${encodeURIComponent("Booking enquiry: " + (data.get("name") || ""))}&body=${encodeURIComponent(lines.join("\n"))}`;
+            const lines = [
+              "Name: " + data.get("name"),
+              "Email: " + data.get("email"),
+              "Course: " + data.get("course"),
+              "Date: " + data.get("date"),
+              "",
+              String(data.get("message") || ""),
+            ];
+            window.location.href = `mailto:thescratchcaddies@gmail.com?subject=${encodeURIComponent(
+              "Booking enquiry: " + (data.get("name") || "")
+            )}&body=${encodeURIComponent(lines.join("\n"))}`;
           }}
         >
           {[
@@ -450,7 +479,6 @@ function Book() {
             thescratchcaddies@gmail.com
           </a>
         </div>
-
       </div>
     </section>
   );
@@ -487,8 +515,6 @@ function Footer() {
             <Instagram size={20} strokeWidth={1.5} />
           </a>
         </div>
-
-
       </div>
     </footer>
   );
@@ -502,7 +528,6 @@ function Index() {
       <Hero />
       <Manifesto />
       <Experience />
-      
       <CourseKnowledge />
       <Partners />
       <WhoWeAre />
