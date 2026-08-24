@@ -19,13 +19,13 @@ import blazersAsset from "@/assets/blazers.jpg.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The Scratch Caddies - Portugal" },
+      { title: "The Scratch Caddies · Portugal" },
       {
         name: "description",
         content:
           "Portugal's caddie and playing partner service. Current and former national team golfers, walking every hole at your side.",
       },
-      { property: "og:title", content: "The Scratch Caddies - Portugal" },
+      { property: "og:title", content: "The Scratch Caddies · Portugal" },
       {
         property: "og:description",
         content:
@@ -134,8 +134,11 @@ function Hero() {
             </h1>
             <p className="mt-8 text-cream/85 text-lg lg:text-xl max-w-2xl leading-relaxed font-light">
               Portugal's caddie and playing partner service. Current and former national team
-              golfers, walking every hole at your side. Available across the country - location
-              based on request.
+              golfers, walking every hole at your side.
+            </p>
+            <p className="mt-6 text-gold-light text-sm sm:text-base tracking-wide font-light max-w-2xl">
+              Now caddying at Terras da Comporta and a private club nearby, through Caddy Clubhouse.
+              Available across Cascais and the Algarve.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
@@ -196,12 +199,12 @@ function Experience() {
     {
       tag: "Professional",
       title: "Caddie Service",
-      body: "Precise yardages, green reading, course management from a national-level competitor.",
+      body: "Precise yardages, green reading, course management from a national level competitor.",
     },
     {
       tag: "For Concierges",
       title: "Groups & Corporate",
-      body: "Golf days, multi-round visits, tournament guests. We coordinate the caddies and guarantee the same standard for every player.",
+      body: "Golf days, visits of several rounds, tournament guests. We coordinate the caddies and guarantee the same standard for every player.",
     },
   ];
   return (
@@ -243,7 +246,7 @@ function CourseKnowledge() {
             Less to think about. <em className="italic text-forest">More to enjoy.</em>
           </h2>
           <p className="mt-8 text-forest-dark/80 text-lg leading-relaxed font-light">
-            We handle the reading, the distances, the small decisions - and everything around the
+            We handle the reading, the distances, the small decisions, and everything around the
             round, sorted before you arrive. You're free to play, take in the course, and enjoy the
             company. An easy pace, good conversation, and a round that takes care of itself.
           </p>
@@ -279,15 +282,29 @@ function Partners() {
             The service your guests <em className="italic text-gold-light">deserve</em>.
           </h2>
           <p className="mt-8 text-cream/80 text-lg leading-relaxed font-light max-w-lg">
-            We work alongside the finest hotels, concierges, and golf clubs in Portugal - the name
+            We work alongside the finest hotels, concierges, and golf clubs in Portugal, the name
             they can put next to their own, with the certainty it belongs there.
           </p>
-          <a
-            href="#book"
-            className="inline-block mt-10 bg-gold text-forest-dark px-8 py-3 tracking-[0.2em] uppercase text-xs hover:bg-gold-light transition-colors"
-          >
-            Request Partnership Info
-          </a>
+          <p className="mt-6 text-gold-light/90 text-base leading-relaxed font-light max-w-lg italic">
+            Discretion is part of the service. We never disclose our clients, their guests, or where
+            they play.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a
+              href="https://wa.me/351913481537"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gold text-forest-dark px-8 py-3 tracking-[0.2em] uppercase text-xs hover:bg-gold-light transition-colors"
+            >
+              Message us on WhatsApp
+            </a>
+            <a
+              href="#book"
+              className="inline-block border border-gold text-gold px-8 py-3 tracking-[0.2em] uppercase text-xs hover:bg-gold hover:text-forest-dark transition-all"
+            >
+              Request Partnership Info
+            </a>
+          </div>
         </div>
         <div className="space-y-px bg-gold/25">
           {rows.map(([title, body]) => (
@@ -388,7 +405,7 @@ function Book() {
             e.preventDefault();
             const data = new FormData(e.currentTarget);
             const lines = ["Name: " + data.get("name"), "Email: " + data.get("email"), "Course: " + data.get("course"), "Date: " + data.get("date"), "", String(data.get("message") || "")];
-            window.location.href = `mailto:thescratchcaddies@gmail.com?subject=${encodeURIComponent("Booking enquiry - " + (data.get("name") || ""))}&body=${encodeURIComponent(lines.join("\n"))}`;
+            window.location.href = `mailto:thescratchcaddies@gmail.com?subject=${encodeURIComponent("Booking enquiry: " + (data.get("name") || ""))}&body=${encodeURIComponent(lines.join("\n"))}`;
           }}
         >
           {[
